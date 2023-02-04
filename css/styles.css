@@ -1,11 +1,29 @@
 /* =====##### *CSS-змінні* #####===== */
 
 :root {
+  /* === Selection Colors === */
+  --color-iris: #4d5ae5;
+  --color-ocean: #404bbf;
+  --color-navy-blue: #2e2f42;
+  --color-slate: #434455;
+  --color-cornflower: #e7e9fc;
+  --color-cloud: #f4f4fd;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* === Fonts === */
   --primary-font: 'Roboto', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
+
+  /* === Text Colors === */
   --primary-text-color: #2e2f42;
   --secondary-text-color: #434455;
-  --accent-color: #404bbf;
+  --footer-text-color: #e7e9fc;
+
+  /* === Background Colors ===*/
+  --background-light-color: #ffffff;
+  --backgraund-grey-color: #f4f4fd;
+  --backgraund-dark-color: #2e2f42;
 }
 
 /* Скидання дефолтних стилів від браузера */
@@ -23,20 +41,10 @@ body {
   color: var(--primary-text-color);
 }
 
-/* =====##### *КОМПОНЕНТИ* #####===== */
+/* =====##### *HEADER* #####===== */
 
-.infotext {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
-}
-
-.ftr-infotext {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #e7e9fc;
+.header {
+  background-color: var(--background-light-color);
 }
 
 /* -- The logo -- */
@@ -46,48 +54,15 @@ body {
   font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #4d5ae5;
+  color: var(--color-iris);
 }
-
 .logo-theme-light {
-  color: #2e2f42;
+  color: var(--color-navy-blue);
 }
-
 .logo-theme-dark {
-  color: #f4f4fd;
-}
-
-/* -- Buttons --*/
-
-.modal-btn {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  background: #4d5ae5;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.modal-btn:hover,
-.modal-btn:focus {
-  background: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
-
-/* =====##### *HEADER* #####===== */
-
-.header {
-  background: #ffffff;
+  color: var(--color-cloud);
 }
 
 /* -- Main navigation -- */
@@ -97,12 +72,11 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--primary-text-color);
+  color: var(--color-navy-blue);
 }
-
 .menu-link:hover,
 .menu-link:focus {
-  color: var(--accent-color);
+  color: var(--color-ocean);
 }
 
 /* -- Contacts -- */
@@ -112,12 +86,11 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
+  color: var(--color-slate);
 }
-
 .contact:hover,
 .contact:focus {
-  color: var(--accent-color);
+  color: var(--color-ocean);
 }
 
 /* =====##### *MAIN* #####===== */
@@ -125,29 +98,95 @@ body {
 /* -- Hero-image section -- */
 
 .hero {
-  background: #2e2f42;
+  background-color: var(--backgraund-dark-color);
 }
 
-.main-title {
-  font-weight: 700;
+.hero-title {
   font-size: 56px;
   line-height: 1.07;
+  text-align: center;
   letter-spacing: 0.02em;
-  color: #ffffff;
+  color: var(--color-white);
+}
+
+.hero-button {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  background-color: var(--color-iris);
+
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--color-ocean);
 }
 
 /* -- Sections -- */
 
-.main-box {
-  background: #e5e5e5;
+.section {
+  background-color: var(--background-light-color);
 }
 
-.team-box {
-  background: #f4f4fd;
+.team-section {
+  background-color: var(--backgraund-grey-color);
+}
+
+.filter-button {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--color-iris);
+  background-color: var(--color-cloud);
+
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.filter-button:hover,
+.filter-button:focus {
+  color: var(--color-white);
+  background-color: var(--color-ocean);
+}
+
+.subtitle {
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
 }
 
 /* =====##### *FOOTER* #####===== */
 
 .footer {
-  background: #2e2f42;
+  background-color: var(--backgraund-dark-color);
+}
+
+.footer-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--footer-text-color);
 }
